@@ -36,11 +36,12 @@ class Evaluator(object):
     
 
 def main():
-    data = pd.read_csv('./transferred.csv').astype(str) # text you want to check
-    data = data['rev'].values.tolist()
+    # input the generated sentence to check perplexity
+    print("Input sentence to get perplexity score: ")
+    sentence = input()
     
     base = Evaluator()
-    ppl = base.perplexity(texts_transfered=data)
+    ppl = base.perplexity(texts_transfered=[sentence])
     
     print(f" [ppl score]: {ppl:.4f}")
     

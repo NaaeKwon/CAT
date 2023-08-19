@@ -4,27 +4,17 @@ from nltk.tokenize import word_tokenize
 
 import pandas as pd
 
-# input test data: the file name could be changed due to your personal file name
-test_df = pd.read_csv('./test_df.csv', index_col=False)
+# input original sentence
+texts_original = str(['This place is so good I like this place'])
 
-# input generated text data from test: the file name could be changed due to your personal file name
-test_df_transfered = pd.read_csv('./transferred.csv', index_col=False).astype(str)
+# input transferred sentence
+texts_transferred = str(['This place is so good I like this place'])
 
-texts_original = test_df['text']
-
-texts_transfered = test_df_transfered['result']
-
-def nltk_bleu(texts_original, texts_transfered):
+def nltk_bleu(texts_original, texts_transferred):
     
     texts_original = [word_tokenize(original.lower().strip()) for original in texts_original]
-    texts_transfered = word_tokenize(texts_transfered.lower().strip())
+    texts_transferred = word_tokenize(texts_transferred.lower().strip())
 
-    return sentence_bleu(texts_original, texts_transfered, weights=(1,0,0,0)) *100
+    return sentence_bleu(texts_original, texts_transferred, weights=(1,0,0,0)) *100
 
-
-sum_transfered = 0
-for x, y in zip(texts_original, texts_transfered):
-    n = texts_transfered.shape[0]
-    sum_transfered += nltk_bleu([x], y)
-    
-print('self bleu score: ', sum_transfered / n)
+print(f'self bleu score: {nltk_bleu(texts_original, texts_transferred)}')
