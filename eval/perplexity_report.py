@@ -11,8 +11,8 @@ class Evaluator(object):
         resource_package = __name__
 
         # select whether it is amazon or yelp
-        # ppl_path = 'pre_file/ppl_amazon_train.binary'
-        ppl_path = 'pre_file/renew_yelp_ppl.binary'
+        ppl_path = 'pre_file/ppl_amazon_train.binary'
+        # ppl_path = 'pre_file/renew_yelp_ppl.binary'
 
         ppl_file = pkg_resources.resource_stream(resource_package, ppl_path)
         
