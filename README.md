@@ -1,42 +1,37 @@
 # CAT
-### 🔄️ To install setup:
+### 🔄️ To install python dependencies before train:
 ```
-conda install (your_env_name) env32bit --file set-file.txt
-```
-
-### 🔄 To download .pt .binary file:
-Due to the size limit, download files at the url of the following file
-```
-pt_file_url.txt
-amazon_bin_file_url.txt
-yelp_bin_file_url.txt
+sh setup.sh
 ```
 
-
-### 1️⃣ Preliminary module  
-### To see usage:
+### 1️⃣ To train model:
+#### 1. Run preliminary module  
 ```
-python recon_main.py --help
-```
-
-
-### 2️⃣ Adversarial module
-Initialize parameter with reconstruction model (Recon.pt)
-### To see usage:
-```
-python adv_main.py --help
+python recon_main.py --mode train
 ```
 
+#### 2. Run adversarial module
+```
+python adv_main.py --mode train
+```
 
-### 3️⃣ Style attention module
-Initialize parameter with adversarial module (Adv.pt)
-### To see usage:
+#### 3. Run style attention module
 ```
-python style_attn_main.py --help
+python style_attn_main.py --mode train
 ```
-### To get target style sentence:
+
+### 🔄 To get file for inference:
+You can run inference just by downloading this file
 ```
-1. Run the code in test option 
-2. Type sentence to "Input Sentence: "
-3. Input Style range from 1 to 5 to "Target Style: "
+sh download.sh
+```
+
+### 2️⃣ To inference model:
+```
+python style_attn_main.py --mode test --d [Amazon|YELP]
+```
+### ☑ To get target style sentence:
+```
+1. Type sentence to "Input Sentence: "
+2. Input Style range from 1 to 5 to "Target Style: "
 ```
