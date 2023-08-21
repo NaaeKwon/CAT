@@ -5,17 +5,22 @@ sh setup.sh
 ```
 
 ### 1️⃣ To train model:
-#### 1. Run preliminary module  
+#### 1. Run classifier
+```
+python classifier.py
+```
+
+#### 2. Run preliminary module  
 ```
 python recon_main.py --mode train
 ```
 
-#### 2. Run adversarial module
+#### 3. Run adversarial module
 ```
 python adv_main.py --mode train
 ```
 
-#### 3. Run style attention module
+#### 4. Run style attention module
 ```
 python style_attn_main.py --mode train
 ```
