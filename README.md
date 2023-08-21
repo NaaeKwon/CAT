@@ -38,5 +38,5 @@ python style_attn_main.py --mode test --d [Amazon|YELP]
 ### ☑ To get target style sentence:
 ```
 1. Type sentence to "Input Sentence: "
-2. Input Style range from 1 to 5 to "Target Style: "
+2. Input style range from 1 to 5 to "Target Style: "
 ```
