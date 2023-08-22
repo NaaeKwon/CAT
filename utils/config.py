@@ -17,7 +17,7 @@ class ModelConfig:
         self.d_style = 64
         
         self.type = 5
-        self.dropout_rate = 0.15
+        self.dropout_rate = 0.2
         
         self.model_name = 'prajjwal1/bert-medium'   # pre-trained LM model name
         self.vocab_size = 30522                     # pre-trained LM's vacabulary size
