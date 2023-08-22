@@ -25,12 +25,12 @@ python adv_main.py --mode train
 python style_attn_main.py --mode train
 ```
 
-#### 5. Run test version of the module
+#### 5. Run test version of the style attention module
 ```
 python style_attn_main.py --mode test
 ```
 
------
+***
 
 ### 🔄 To get file for inference:
 You can run inference just by downloading this file
@@ -43,7 +43,7 @@ sh download.sh
 python style_attn_main.py --mode test --d [Amazon|YELP]
 ```
 
-----
+***
 
 ### ☑ To get target style sentence:
 ```
