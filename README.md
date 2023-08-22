@@ -4,7 +4,7 @@
 sh setup.sh
 ```
 
-### 1️⃣ To train model:
+### 1️⃣ To train and inference model:
 #### 1. Run classifier
 ```
 python classifier.py
@@ -25,16 +25,26 @@ python adv_main.py --mode train
 python style_attn_main.py --mode train
 ```
 
+#### 5. Run test version of the module
+```
+python style_attn_main.py --mode test
+```
+
+-----
+
 ### 🔄 To get file for inference:
 You can run inference just by downloading this file
 ```
 sh download.sh
 ```
 
-### 2️⃣ To inference model:
+### 2️⃣ To inference model using the file downloaded above:
 ```
 python style_attn_main.py --mode test --d [Amazon|YELP]
 ```
+
+----
+
 ### ☑ To get target style sentence:
 ```
 1. Type sentence to "Input Sentence: "
