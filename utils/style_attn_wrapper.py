@@ -203,6 +203,7 @@ def style_attn_test(model, sen_sep, sen_label, attention_mask, tokenizer, max_le
     
     with torch.no_grad():
         model.eval()
+        model.to(config.device)
         
         enc_in = sen_sep.unsqueeze(0).to(config.device)
         label = sen_label.unsqueeze(0).to(config.device)   # label: (1, 5)
