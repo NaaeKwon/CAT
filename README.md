@@ -1,4 +1,4 @@
-# Class conditioned text generation with style attention mechanism for embracing diversity
+# Class Conditioned Text Generation with Style Attention Mechanism for Embracing Diversity
 ### 🔄️ To install python dependencies before train:
 ```
 sh setup.sh
@@ -50,6 +50,8 @@ python style_attn_main.py --mode test --d [Amazon|YELP]
 1. Type sentence to "Input Sentence: "
 2. Input style range from 1 to 5 to "Target Style: "
 ```
+
+***
 
 ### 📃 To cite the paper:
 ```
